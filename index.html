@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Landing Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <p class="title">Mountain Travel</p>
+                <span id="mobile-toggle" onclick="mobile()"><i class="fa fa-bars"></i></span>
+                <ul id="js-menu" class="main-nav" id="js-menu">
+                    <li>
+                        <a href="#tours" class="nav-links">Tours</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav-links">About</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-links">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-content">
+                <h1>Mountain Travel</h1>
+                <p>Unmissable Adventure Tours Around The World</p>
+                <a href="" class="blue-btn">CONTACT US NOW</a>
+            </div>
+        </header>
+
+        <div class="inner-cont" id="tours">
+            <div class="inner-header">
+                <h2>Some Of Our Destinations</h2>
+                <p>Tired of the ocean? Are the plains too plain? Come along with us on one of our mountain adventures.</p>
+                <p>Here are some pictures from people who have had experiences with us.</p>
+                <hr>
+            </div>
+            <div class="destination-img-flex">
+                <div style="background-image: url('./img/mountain1.jpg');"></div>
+                <div class="flex1" style="background-image: url('./img/mountain2.jpg');"></div>
+                <div class="flex1" style="background-image: url('./img/mountain3.jpg');"></div>
+                <div style="background-image: url('./img/mountain4.jpg');"></div>
+            </div>
+        </div> 
+
+        <div class="inner-cont" id="about" style="background-color: rgb(245, 245, 245);">
+            <div class="inner-header">
+                <h2>Tour Packages</h2>
+                <p>We offer a variety of mountaineering packages.</p> 
+                <p>Whether you've climbed Everest or don't even know what a mountain is, we've got the perfect vacation for you.</p>
+                <hr>
+            </div>
+            <div class="tp-flex">
+                <div class="card">
+                    <p><i class="fa fa-compass"></i></p>
+                    <h3>Guided Trips</h3>
+                    <p>Looking for the complete experience? Take a tour with one of our experts. They'll show you secrets that you're likely to miss otherwise.</p>
+                </div>
+                <div class="card">
+                    <p><i class="fa fa-camera-retro"></i></p>
+                    <h3>Photo Trips</h3>
+                    <p>Want to experience nature's beauty without all of that annoying exercise? Take a photo tour on one of our mountain buses.</p>
+                </div>
+                <div class="card">
+                    <p><i class="fa fa-bicycle"></i></p>
+                    <h3>Biking Trips</h3>
+                    <p>If bicycles are more your speed, consider taking a tour through one of our mountain bike paths. We'll provide the bikes and lunch too!</p>
+                </div>
+                <div class="card">
+                    <p><i class="fa fa-flag-checkered"></i></p>
+                    <h3>Racing Trips</h3>
+                    <p>Got a competitive spirit? Sign up for one of our mountain marathons! Try to reach the summit before anyone else.</p>
+                </div>
+            </div>
+        </div> 
+
+        <div class="learn-cont inner-cont" id="contact">
+            <div class="inner-header">
+                <h2>Learn More</h2>
+                <p>Want to know about our upcoming mountain-related events, or come to one of out mixers? Just sign up for out mailing list. No spam from us, we promise! Except for the spam we give you to keep up your energy while you're hiking through the mountains. We have tons of that.</p>
+                <hr>
+            </div>
+            <div class="input-cont">
+                <form>
+                    <input type="email" class="email-input" name="email" placeholder="Email">
+                    <input type="submit" class="blue-btn">
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <p>I DON'T REALLY KNOW ABOUT THE IMAGES USED, THEY ARE PROBABLY NOT FREE FOR COMMERCIAL USE, SRY...</p>
+            <p>WHY ARE YOU EVEN READING THIS?! THERE'S NEVER ANYTHING INTERESTING IN THE FOOTER</p>
+            <p>I added some social media platform icons to look professional</p>
+            <p class="social-icons"><a href=""><i class="fa fa-twitter-square"></i></a><a href=""><i class="fa fa-facebook-square"></i></a><a href=""><i class="fa fa-snapchat-square"></i></a></p>
+        </footer>
+    </div>
+
+    <script>
+        
+        const mobile = () => {
+            let mainNav = document.getElementById("js-menu");
+            mainNav.classList.toggle("active");
+        }
+
+        window.addEventListener("click", function(e){
+            if(!document.getElementById("js-menu").contains(e.target) && !document.getElementById("mobile-toggle").contains(e.target)){
+                document.getElementById("js-menu").classList.remove("active");
+            }
+        })
+        
+
+    </script>
+
+</body>
+</html>

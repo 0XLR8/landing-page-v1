@@ -1,0 +1,280 @@
+body {
+  margin: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3 {
+  margin-top: 0px;
+}
+a{
+    user-select: none;
+    text-decoration: none;
+}
+
+/* HEADER SECTION */
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+header .navbar, header .header-content{
+    animation: fadeIn 0.4s linear 1;
+}
+
+header {
+  background-image: url("../img/main.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 30px 80px;
+  color: white;
+  margin-bottom: 50px;
+}
+    header .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header .navbar .title{
+        font-size: 22px;
+        user-select: none;
+    }
+    header .navbar #mobile-toggle{
+        display: none;
+    }
+    header .navbar ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        position: relative;
+        top: 7px;
+    }
+    header .navbar li{
+        display: inline-block;
+        margin-left: 20px;
+    }
+    header .navbar li a{
+        color: white;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s ease-in-out;
+    }
+    header .navbar li a:hover{
+        color: white;
+        border-color: white;
+    }
+
+    .header-content{
+        margin: 140px auto;
+        text-align: center;
+    }
+    .header-content h1{
+        font-size: 40px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    .header-content p{
+        font-size: 19px;
+    }
+    .blue-btn{
+        display: inline-block;
+        color: white;
+        border: 3px solid transparent;
+        cursor: pointer;
+        background-color: rgb(71, 71, 197);
+        font-weight: bold;
+        font-size: 14px;
+        padding: 10px 30px;
+        border-radius: 5px;
+        transition: 0.1s ease-in-out;
+    }
+    .blue-btn:hover{
+        background-color: rgb(30, 30, 133);
+    }
+
+/* Destinations Section */
+
+.inner-cont{
+    padding: 50px 20px;
+}
+.inner-header{
+    text-align: center;
+}
+.inner-header h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+.inner-header p{
+    font-size: 17px;
+    color: rgb(49, 49, 49);
+    margin-bottom: 10px;
+}
+.inner-header hr{
+    max-width: 300px;
+    height: 3px;
+    border: none;
+    border-radius: 40px;
+    background-color: rgb(66, 66, 202);
+    margin: 30px auto 50px auto;
+}
+.destination-img-flex{
+    max-width: 1100px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.destination-img-flex div{
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+    height: 280px;
+    flex-basis: 330px;
+    flex-grow: 1;
+}
+.destination-img-flex .flex1{
+    flex-grow: 4;
+}
+.destination-img-flex img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Tour Packages */
+.tp-flex{
+    max-width: 900px;
+    margin: 50px auto 0px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tp-flex .card{
+    flex-basis: 350px;
+    flex-grow: 1;
+    margin: 20px;
+}
+.tp-flex .card i{
+    font-size: 60px;
+    color: rgb(108, 108, 255);
+}
+.tp-flex .card h3{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+/* Learn More Section */
+.learn-cont p{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    line-height: 27px;
+}
+.learn-cont .input-cont input{
+    display: block;
+    margin: 20px auto;
+    font-size: 17px;
+}
+.learn-cont .input-cont .email-input{
+    width: 400px;
+    border-radius: 3px;
+    border: none;
+    padding: 8px;
+    box-shadow: 0px 0px 3px rgb(179, 179, 179);
+}
+
+/* Footer Section */
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(98, 133, 150);
+}
+footer p{
+    color: white;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+footer .social-icons{
+    margin: 0px;
+}
+footer .social-icons a{
+    display: inline-block;
+    margin: 0px 5px;
+    color: white;
+    font-size: 35px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 700px){
+    header{
+        padding: 30px 40px;
+    }
+    header .navbar{
+        display: block;
+    }
+    header .navbar #mobile-toggle{
+        display: block;
+        position: absolute;
+        font-size: 23px;
+        border: 2px solid white;
+        border-radius: 6px;
+        padding: 1px 9px 3px 9px;
+        top: 27px;
+        right: 50px;
+        cursor: pointer;
+    }
+    header .navbar ul{
+        display: none;
+        width: 300px;
+        margin: 0 auto;
+        background-color: rgb(71, 71, 197);
+        padding: 15px;
+        border-radius: 15px;
+    }
+    header .navbar li{
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        text-align: center;
+        padding-bottom: 8px;
+        border-bottom: 1px solid white;
+    }
+    header .navbar li a{
+        border: none;
+    }
+    header .navbar ul :first-child{
+        margin-top: 0px;
+    }
+    header .navbar ul :last-child{
+        margin-bottom: 0px;
+        padding: 0px;
+        border: none;
+    }
+    .active{
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 500px){
+    header{
+        margin-bottom: 30px;
+    }
+    .header-content{
+        margin: 100px auto;
+    }
+    .inner-cont{
+        padding: 30px 20px;
+    }
+    .email-input{
+        width: 300px !important;
+    }
+}
